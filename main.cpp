@@ -531,7 +531,7 @@ int WINAPI wWinMain(HINSTANCE hInst, HINSTANCE, PWSTR, int nCmdShow) {
     std::vector<std::thread> workers;
     for (int i = 0; i < WORKER_COUNT; i++) workers.emplace_back(WorkerThread);
 
-    std::thread waiter([hwnd] {
+    std::thread waiter([&, hwnd] {
         scanner.join();
         for (auto& t : workers) t.join();
         PostMessage(hwnd, WM_APP_FINISHED, 0, 0);
